@@ -6,8 +6,16 @@ import jakarta.validation.constraints.Size;
 public class Customer {
     private String firstName;
     @NotNull(message = "last name must not be empty")
-    @Size(max = 20,min = 5,message="last name contain 5 to 10 characters")
-    private String lasrName;
+    @Size(min = 1 ,message="last name contain 5 to 10 characters")
+    private String lastName;
+
+    public Customer() {
+    }
+
+    public Customer(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
 
     public String getFirstName() {
         return firstName;
@@ -17,11 +25,19 @@ public class Customer {
         this.firstName = firstName;
     }
 
-    public String getLasrName() {
-        return lasrName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLasrName(String lasrName) {
-        this.lasrName = lasrName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
     }
 }
