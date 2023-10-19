@@ -18,6 +18,15 @@
        class="error"
    ></span>
     <br><br>
+    free spaces: <input type="number" th:field="*{freeSpace}">
+    <span th:if="${#fields.hasErrors('freeSpace')}"
+          th:errors="*{freeSpace}"
+          class="error"
+    >
+
+    </span>
+
+    <br><br>
     <input type="submit" value="submit">
 
 </form>
