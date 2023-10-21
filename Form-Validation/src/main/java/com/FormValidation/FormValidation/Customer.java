@@ -16,6 +16,7 @@ public class Customer {
     @Min(value = 1,message = "value must be grater than 1")
     private String freeSpace;
     @CourseCode
+    @NotNull(message = "last name must not be empty")
     private String CourseCode;
 
     public Customer() {

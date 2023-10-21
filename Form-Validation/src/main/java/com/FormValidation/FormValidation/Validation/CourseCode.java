@@ -16,7 +16,7 @@ public @interface CourseCode {
     //define default course code
     public  String value() default "CSE-";
     //define etton message
-    public String message() default "Must strat with cse";
+    public String message() default "Must strat with CSE-";
     //define default gropu
     public Class<?>[] groups() default {};
     //define default payloads
